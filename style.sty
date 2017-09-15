@@ -9,11 +9,22 @@
 
 %pdf page settings
 \usepackage[a4paper,top=30mm,bottom=40mm,inner=25mm,outer=35mm]{geometry} 
-\usepackage{scrlayer-scrpage} %Headers and footers
+%\usepackage{scrlayer-scrpage} %Headers and footers
 
 %Headers and Footnotes
-\pagestyle{headings}
-\ihead{Skript Statistik Grundlagen. Stand: \today}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\ihead{Skript Statistik Grundlagen. Stand: \today}
+
+\fancyhf{}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[LE,RO]{\textbf{\thepage}}
+\fancyhead[ER]{\rightmark}
+\fancyhead[LO]{\leftmark}
+\fancypagestyle{plain}{% entfernt pagenumbering on chapter pages
+	\fancyhf{}
+}
 
 %more features for environments and other stuff
 \usepackage{tikz} %Kein Zeichenprogramm.

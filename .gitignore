@@ -1,0 +1,13 @@
+Makefile
+*.swp
+**/*.swp	
+**/*.texp*
+# OS gernerated Files #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehtumbs.db
+Thumbs.db
+
