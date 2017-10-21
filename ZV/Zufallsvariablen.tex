@@ -142,12 +142,104 @@
 			\item bei $5,6 \to$ Verlust von $5EURO$
 			\item bei $1,2,3$ oder $4$ Gewinn in Höhe der doppelten Augenzahl 
 		\end{itemize}
-	ZV $Z =$ Gewinn / Verlust in EURO\\
+\end{minipage}
+
+	ZV $Z =$ Gewinn / Verlust in EURO mit 
 	Realisationsmöglichkeiten: $-5,2,4,6,8$\\
-	\begin{tabular}{c | c c}
-		$y_i$ & 0 & 1\\
+
+\begin{minipage}{0.45\linewidth}
+\begin{tikz}[scale=0.5]
+	\draw[help lines] (0,0) grid (8,5);	
+\end{tikz}
+\end{minipage}
+\begin{minipage}{0.55\linewidth}
+	\underline{Wahrscheinlichkeitsverteilung von $Z$}
+	\begin{tabular}{c | c c c c c}
+		$Z_i$ 	&  -5		& 	2		&		4		& 	6		&		8		\\
 		\hline
-		\vspace{1em} $ P( y = y_1)$ & $\frac{5}{6}$ & $\frac{1}{6}$
+		\vspace{1em} $ P( Z = z_1)$ & $\frac{2}{6}$ & $\frac{1}{6}$ & $\frac{1}{6}$ & $\frac{1}{6}$ & $\frac{1}{6}$ 
 	\end{tabular}
 \end{minipage}
+
+\begin{minipage}{0.45\linewidth}
+\begin{tikz}[scale=0.5]
+	\draw[help lines] (0,0) grid (8,5);	
+\end{tikz}
+\end{minipage}
+\begin{minipage}{0.55\linewidth}
+	\underline{Verteilungsfunktion von $Z$}: $F(z) = P(Z \leq z), z\in \R$
+	\begin{tabular}{c | c c c c c}
+		$Z_i$ 	&  -5		& 	2		&		4		& 	6		&		8		\\
+		\hline
+		\vspace{1em} $ P( Z \leq z_1)$ & $\frac{2}{6}$ & $\frac{3}{6}$ & $\frac{4}{6}$ & $\frac{5}{6}$ & $\frac{6}{6}=1$ 
+	\end{tabular}
+\end{minipage}
+~\\
+$\begin{aligned}
+	E(Z)	&= z_1 \cdot \underbrace{P(Z=z_1)}_{p_1} + z_2 \cdot \underbrace{P(Z=z_2)}_{p_2}
+						+ \cdot + z_5 \cdot \underbrace{P(Z=z_5)}_{p_5}\\
+				&= z_1 p_1 + z_2 p_2 + \dots + z_5 p_5\\
+				&= -5 \cdot \frac{2}{6} + 2 \cdot \frac{1}{6} + 4 \cdot \frac{1}{6}
+				+ 6 \cdot \frac{1}{6}	+ 8\cdot \frac{1}{6}\\
+				&= + \underline{\underline{1,\ov{6}}}
+\end{aligned}$
+\begin{tabbing}
+	\underline{Interpretation:} \= Spielen wir dieses Spiel sehr oft, wird der 
+		Gewinn im Durchschnitt bei $1,67$EURO liegen.
+\end{tabbing}
 \end{bsp}
+
+\underline{deskriptiv}: Varianz und Standardabweichung \\
+Varianz \dots mittlere quadrierte Abweichung von arithmetischen Mittel
+	$$ \sum (\alpha_i - \ov{x})^2 h_i = s_x^2$$
+$\alpha_i$ $\leftrightarrow$ Realisationsmöglichkeiten $x_i$ \\
+$\ov{x}$ $\leftrightarrow$ $E(X)$	\\
+$h_i$ $\leftrightarrow$ $p_i$
+
+\underline{Varianz einer ZV $X$}: 
+	$Var(X) = \sigma^2 = \sum_{i=1}^{k}(x_i - E(X))^2 p_i		
+		= E((X-E(X))^2)$, wobei $p_i = P(X=x_i)$\\
+Erwartungswert der quadrierten Differenzen für viele Versuchswiederholungen gilt  
+
+\begin{tabular}{p{0.5\linewidth} p{0.5\linewidth}}
+\hfill 23 & 23 \hfill\\
+\end{tabular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\varA{\mbox{
+	\begin{tabular}{@{}l@{}}
+		berechnet mit Realisations-\\möglichkeiten und $p_i$
+	\end{tabular}
+	}
+	\hspace{0em}
+}
+\def\varB{\mbox{
+	\begin{tabular}{@{}l@{}}
+		berechnet mit Realisationen bzw.\\ Beobachtungen und $h_i$
+	\end{tabular}
+	}
+	\hspace{0em}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	$$ \underbrace{Var(X)}_{\varA} \approx \; \underbrace{s_x^2}_{\varB}$$
+
+%\begin{tabular}{p{0.15\linewidth} | p{0.1\linewidth} | p{0.1\linewidth} | p{0.1\linewidth} | p{0.1\linewidth} | p{0.1\linewidth}}
+\begin{tabular}{c | c | c | c | c | c l }
+$z_i$	  & -5 & 2 & 4 & 6 & 8\\
+\hline   
+$p_i$  &  $\frac{2}{6}$  & $\frac{1}{6}$ & $\frac{1}{6}$ & $\frac{1}{6}$ & $\frac{1}{6}$ \\
+$(z_i -1,\ov{6})^2$ & 44,44 & 0,11 & 5,44 & 18,78 & 40,11 \\
+$(z_i -1,\ov{6})^2$ & 14,81 & 0,018 & 0,91 & 3,13 & 6,685 \\
+\end{tabular}
+\begin{tabular}{l}
+\\ \\ \\
+$\Sigma = \underline{\underline{25,55}}$	
+\end{tabular}
+
+$Var(Z) = \sigma_Z^2 = 25,55$\\
+Standardabweichung: $\sigma_Z = \sqrt{Var(Z)} = \sqrt{25,55} = $ \underline{\underline{5,05}} \\
+
+Im Mittel weichen die Realisationen von $Z$ (also der Gewinn) um 5,05 EURO von durchschnittlichen bzw. erwarteten Gewinn 1,67 EURO ab.\\
+
+$ZV$ $Y$ sei auch ein Gewinn in einem Glückspiel
