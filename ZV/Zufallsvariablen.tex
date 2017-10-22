@@ -8,6 +8,7 @@
 			 \underset{(Omega)}{\Omega} &= \text{ Menge der möglichen Ausgänge} \\
 																	&= \text{ Ergebnisse } 
 		\end{aligned}$
+
 \hfill
 		\begin{tikzpicture}[scale=0.7,baseline={(current bounding box.center)}]
 		%	\draw[help lines] (0,0) grid (8,5);
@@ -20,7 +21,8 @@
 			\node[rotate=0] at (5.2,1) {\LARGE 6};
 			\draw [->] (2,2.3) -- (0,2.3);
 		\end{tikzpicture}
-
+%
+\vspace{-0.01\textheight}
 	\begin{itemize}[]
 		\item% 
 			\begin{flalign*}
@@ -35,7 +37,6 @@
 			 P (\set{1}) &= \frac{1}{6}\\ 
 			\end{flalign*}	
 	\end{itemize}
-\todor[test]
 
 \begin{minipage}{0.4\linewidth}
 	\begin{tikzpicture}[scale=0.7]
@@ -243,3 +244,79 @@ Standardabweichung: $\sigma_Z = \sqrt{Var(Z)} = \sqrt{25,55} = $ \underline{\und
 Im Mittel weichen die Realisationen von $Z$ (also der Gewinn) um 5,05 EURO von durchschnittlichen bzw. erwarteten Gewinn 1,67 EURO ab.\\
 
 $ZV$ $Y$ sei auch ein Gewinn in einem Glückspiel
+
+\begin{tabular}{c | c c c c}
+	$y_i$		&		0		&		1		&		5		&		10	\\
+	\hline
+	$p_i$		&	0,35	& 0,5		&		0,1	&	0,05  \\
+	$(y_i -\underbrace{E(Y))}_{= 1,5}^2$
+					&	2,25	&	0,25	&	12,15	&	72,25
+\end{tabular}
+
+$\begin{aligned}
+	E(Y) &= 0,35 \dot 0 + 0,5 \cdot 1 + 0,1 \cdot 5 + 0,05 \cdot 10 =
+	\underline{\underline{1,5}} EURO \\
+%
+	E(Z) &= +1,67  EURO \\
+%
+	Var(Y) &= 2,25 \cdot 0,35 + 0,25 \cdot 0,5 + 12,25 \cdot 0,1 +
+	72,26 \cdot 0,05 \\
+	&= \text{\underline{\underline{5,75}}} = \sigma_y^2\\
+%
+	\sigma_y &= \sqrt{5,75} = \underline{\underline{2,4}} \\
+%
+	\sigma_z &= \underline{\underline{5,05}} \\
+\end{aligned}$
+
+$$\begin{aligned}
+	E(Y)		 &<	E(Z) \\
+	\sigma_Y &< \sigma_Z
+\end{aligned}$$
+
+Summe von zwei Würfeln $ = X$
+
+$\begin{aligned}
+\Omega = \{& \overbrace{(1,1)}^{X=2}, \overbrace{(1,2)}^{X=3}, \dots , 
+	\overbrace{(1,6)}^{X=7} \\
+					 & \underbrace{(2,1)}_{X=3}, \underbrace{(2,2)}_{X=4}, 
+	\underbrace{(2,6)}_{X=8} \\
+	 				 & \underbrace{(6,1)}_{X=7}, \underbrace{(6,2)}_{X=8}, \dots ,
+	\underbrace{(6,6)}_{X=12}\} \quad \text{mögliche Ergebnisse}
+\end{aligned}$
+\par
+alle Ergebnisse haben die gleiche W. \\
+6x6 mögliche Ergebnisse = Anzahl der möglichen Ergebnisse
+
+$\begin{aligned}
+\text{z.B.} \quad & P(X = 3) = P(\set{(1,2), (2,1)}) = \frac{2}{36}\\
+						& P(X = 7) = \frac{6}{36} = \frac{1}{6}
+\end{aligned}$
+
+$(1,6) , (6,1)$\\
+$(2,5), (5,2) $\\
+$(3,4), (4,3)$ \\
+
+\begin{tabular}{c | c | c}
+$x_i$	&	$p_i$	&	$P(X \le x_i)$ \\
+\hline
+	2		&	1/36	&			1/36			\\
+	3		&	2/36	&			3/36			\\	
+	4		&	3/36	&			6/36			\\	
+	5		&	4/36	&		 10/36			\\	
+	6		&	5/36	&		 15/36			\\	
+	7		&	6/36	&		 21/36			\\	
+	8		&	5/36	&		 26/36			\\	
+	9		&	4/36	&		 30/36			\\	
+	10	&	3/36	&		 33/36			\\	
+	11	&	2/36	&		 35/36			\\	
+	12	&	1/36	&		  1/36			\\	
+\end{tabular}
+
+$\begin{aligned}
+	P(X \leq 7) &= \frac{21}{36} \\
+	P(X \geq 7) &= P(X > 6) = 1 - P(\leq 6) =  21/36 \\
+	P(X < 7) &= P(X \leq 6) = \frac{15}{36} \\
+	P(X > 7) &= 1 - P(X \leq 7) = \frac{15}{36} \\
+	\\
+	P(5 < X \leq 10) &= 
+\end{aligned}$

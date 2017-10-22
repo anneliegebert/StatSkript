@@ -1,0 +1,2 @@
+at	ZV/Zufallsvariablen.tex	/^			\\node[rotate=0] at (3,4) {\\LARGE 1};$/
+draw	ZV/Zufallsvariablen.tex	/^		\\draw (5.5,0.5) to [out=60,in=-150] (7.5,3.1);$/
