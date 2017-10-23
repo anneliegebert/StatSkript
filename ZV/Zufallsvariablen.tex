@@ -60,8 +60,8 @@
 \end{minipage}
 %
 \begin{minipage}{0.6\linewidth}
-	ZV $X = $ Augenzahl\\
-	Wahrscheinlichkeitsverteilung
+	\idxunder{ZV}{Zufallsvariable} $X = $ Augenzahl\\
+	\idx{Wahrscheinlichkeitsverteilung}
 	\def \var {0.10\linewidth}
 	\begin{tabular}{m{0.28\linewidth}|m{\var} m{\var}m{\var}m{\var}m{\var}m{\var}}
 		\centering $x_i$  & 1 & 2 & 3 & 4 & 5 & 6 \tabularnewline
@@ -98,12 +98,12 @@
 \end{minipage}
 %
 \begin{minipage}{0.55\linewidth}
-	ZV $Y$ gibt an, ob eine $6$ gewürfelt wurde:
+	\idxunder{ZV}{Zufallsvariable} $Y$ gibt an, ob eine $6$ gewürfelt wurde:
 		\begin{itemize}[]
 			\item $y_1 = 0 :$ keine $6$ wurde gewürfelt
 			\item $y_2 = 1 :$ eine 6 wurde gewürfelt
 		\end{itemize}
-	Wahrscheinlichkeitsverteilung\\
+	\idx{Wahrscheinlichkeitsverteilung}\\
 	\begin{tabular}{c | c c}
 		$y_i$ & 0 & 1\\
 		\hline
@@ -144,7 +144,7 @@
 		\end{itemize}
 \end{minipage}
 
-	ZV $Z =$ Gewinn / Verlust in EURO mit 
+	\idxunder{ZV}{Zufallsvariable} $Z =$ Gewinn / Verlust in EURO mit 
 	Realisationsmöglichkeiten: $-5,2,4,6,8$\\
 
 \begin{minipage}{0.45\linewidth}
@@ -153,7 +153,7 @@
 \end{tikz}
 \end{minipage}
 \begin{minipage}{0.55\linewidth}
-	\underline{Wahrscheinlichkeitsverteilung von $Z$}
+	\underline{\idx{Wahrscheinlichkeitsverteilung} von $Z$}
 	\begin{tabular}{c | c c c c c}
 		$Z_i$ 	&  -5		& 	2		&		4		& 	6		&		8		\\
 		\hline
@@ -189,17 +189,17 @@ $\begin{aligned}
 \end{tabbing}
 \end{bsp}
 
-\underline{deskriptiv}: Varianz und Standardabweichung \\
-Varianz \dots mittlere quadrierte Abweichung von arithmetischen Mittel
+\underline{deskriptiv}: \idx{Varianz} und \idx{Standardabweichung} \\
+\idx{Varianz} \dots mittlere quadrierte Abweichung von \idxbus{arithmetischen}{Mittel}
 	$$ \sum (\alpha_i - \ov{x})^2 h_i = s_x^2$$
 $\alpha_i$ $\leftrightarrow$ Realisationsmöglichkeiten $x_i$ \\
 $\ov{x}$ $\leftrightarrow$ $E(X)$	\\
 $h_i$ $\leftrightarrow$ $p_i$
 
-\underline{Varianz einer ZV $X$}: 
+\underline{\idx{Varianz} einer \idxunder{ZV}{Zufallsvariable} $X$}: 
 	$Var(X) = \sigma^2 = \sum_{i=1}^{k}(x_i - E(X))^2 p_i		
 		= E((X-E(X))^2)$, wobei $p_i = P(X=x_i)$\\
-Erwartungswert der quadrierten Differenzen für viele Versuchswiederholungen gilt  
+\idx{Erwartungswert} der quadrierten Differenzen für viele Versuchswiederholungen gilt  
 
 \begin{tabular}{p{0.5\linewidth} p{0.5\linewidth}}
 \hfill 23 & 23 \hfill\\
@@ -238,11 +238,11 @@ $\Sigma = \underline{\underline{25,55}}$
 \end{tabular}
 
 $Var(Z) = \sigma_Z^2 = 25,55$\\
-Standardabweichung: $\sigma_Z = \sqrt{Var(Z)} = \sqrt{25,55} = $ \underline{\underline{5,05}} \\
+\idx{Standardabweichung}: $\sigma_Z = \sqrt{Var(Z)} = \sqrt{25,55} = $ \underline{\underline{5,05}} \\
 
 Im Mittel weichen die Realisationen von $Z$ (also der Gewinn) um 5,05 EURO von durchschnittlichen bzw. erwarteten Gewinn 1,67 EURO ab.\\
 
-ZV $Y$ sei auch ein Gewinn in einem Glückspiel
+\idxunder{ZV}{Zufallsvariable} $Y$ sei auch ein Gewinn in einem Glückspiel
 
 \begin{tabular}{c | c c c c}
 	$y_i$		&		0		&		1		&		5		&		10	\\
@@ -272,7 +272,7 @@ $$\begin{aligned}
 	\sigma_Y &< \sigma_Z
 \end{aligned}$$
 
-Summe von zwei Würfeln $ = X$
+Summe von zwei \idxunder{Würfeln}{Würfel} $ = X$
 
 $\begin{aligned}
 \Omega = \Big\{& \overbrace{(1,1)}^{X=2}, \overbrace{(1,2)}^{X=3}, \dots , 

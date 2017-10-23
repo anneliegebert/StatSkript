@@ -1,21 +1,35 @@
 \ProvidesPackage{style}
 
-%pdf language settings
-\usepackage[german]{babel}
+%
+% pdf language settings
+%
+\usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc} %provides a better way for westeuropean characters and such 
-\setlength{\parindent}{0cm} %noindent for all paragraphs
+	\setlength{\parindent}{0cm} %noindent for all paragraphs
 \usepackage[english=british]{csquotes} %For special quoationsmarks
 
-%pdf page settings
+%
+% pdf page settings
+%
 \usepackage[a4paper,top=30mm,bottom=40mm,inner=25mm,outer=35mm]{geometry} 
-%\usepackage{scrlayer-scrpage} %Headers and footers
+\usepackage{hyperref} %Reference
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Hypersetup
+\hypersetup{%
+	colorlinks = true,
+	linkcolor = {blue},
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%Headers and Footnotes
+%
+% Headers and Footnotes, pagestyle
+%
 \usepackage{fancyhdr}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% pagestyle
 \pagestyle{fancy}
 %\ihead{Skript Statistik Grundlagen. Stand: \today}
-
 \fancyhf{}
 \fancyhead{}
 \fancyfoot{}
@@ -25,35 +39,61 @@
 \fancypagestyle{plain}{% entfernt pagenumbering on chapter pages
 	\fancyhf{}
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%more features for environments and other stuff
+%
+% more features for environments and other stuff
+%
 \usepackage{tikz} %Kein Zeichenprogramm.
 \usepackage{float}		
 \usepackage{array}
 \usepackage{wrapfig}
-
-	%% Todo enviroment with package todonote 
-	\usepackage{xkeyval} % Erstmal nur für todonote Package
-	\usepackage{xcolor}
-	\usepackage{calc} % Erstmal nur für todonote Package
-	\usepackage[colorinlistoftodos]{todonotes}
-		%%% Commands and explanation
-			\newcommand{\todor}[1][Fließtext]{\todo[color=red]{#1}} %r ot für vollständiger Beweis
-			\newcommand{\todoo}[1][Beweisskizzen vorhanden]{\todo{#1}} %o range fur Beweisskizzenvorhanden
-			\newcommand{\todoy}[1][Layouten]{\todo[color=yellow]{#1}} %y ellow für schöneres Design
-			\newcommand{\todog}[1][Vollständiger Beweis]{\todo[color=green]{#1}} %g reen für kann man machen: Beispiele, Anmerkungen, etc
 \usepackage{centernot} %nicer looking not
 \usepackage{marvosym} %some Symbols
 \usepackage{paralist} %Adds more function to listing environments
 \usepackage{xstring} %If then 
 \usepackage{ifthen} %also if then
-\usepackage{hyperref} %Reference
 \usepackage{marginnote} %allows to do some nice marinnotes,
 \usepackage{multicol} %for the glossar, to have 2 columns
-	%Glossar
-	\usepackage[nonumberlist]{glossaries} %for a real glossar with hyperlinks, %Einträge extra in
-	%\loadglsentries{FunkAnaGloss.tex}
-	\makenoidxglossaries
-	%Modul
-	\usepackage{subfiles}
+
+%
+%  Todo enviroment with package todonote 
+%
+\usepackage{xkeyval} % Erstmal nur für todonote Package
+\usepackage{xcolor}
+\usepackage{calc} % Erstmal nur für todonote Package
+\usepackage[colorinlistoftodos]{todonotes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Commands and explanation
+\newcommand{\todor}[1][Fließtext]{\todo[inline,color=red]{#1}} %r ot für vollständiger Beweis
+\newcommand{\todoo}[1][Beweisskizzen vorhanden]{inline,\todo{#1}} %o range fur Beweisskizzenvorhanden
+\newcommand{\todoy}[1][Layouten]{\todo[inline,color=yellow]{#1}} %y ellow für schöneres Design
+\newcommand{\todog}[1][Vollständiger Beweis]{\todo[inline,color=green]{#1}} %g reen für kann man machen: Beispiele, Anmerkungen, etc
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% Glossar
+%
+%\usepackage[nonumberlist]{glossaries} %for a real glossar with hyperlinks, %Einträge extra in
+%\loadglsentries{FunkAnaGloss.tex}
+%\makenoidxglossaries
+
+%
+% Index
+%
+\usepackage{makeidx} \makeindex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Commands for Index
+\newcommand{\idx}[1]{#1 \index{#1}}
+\newcommand{\idxunder}[2]{#1 \index{#2}}
+\newcommand{\idxsub}[2]{#1 #2 \index{#1!#2}}
+\newcommand{\idxbus}[2]{#1 #2 \index{#2!#1}}
+\newcommand{\idxsee}[2]{#1 \index{#1 |see{#2 } }}
+% https://en.wikibooks.org/wiki/LaTeX/Indexing#Sophisticated_indexing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% Modul
+%
+\usepackage{subfiles}
 %

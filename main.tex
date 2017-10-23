@@ -3,11 +3,18 @@
 \usepackage{mathmacros}
 
 \begin{document}
+\tableofcontents
 
-  \chapter{Deskriptive Statistik}
-	\chapter{Wahrscheinlichkeitsrechnung und Zufallsvariablen}
-		\include{ZV/Wahrscheinlichkeitsrechnung}
-		\include{ZV/Zufallsvariablen} %Dennis 
-	\chapter{Induktive Statistik}
+\chapter{Deskriptive Statistik}
+\chapter{Wahrscheinlichkeitsrechnung und Zufallsvariablen}
+	\include{ZV/Wahrscheinlichkeitsrechnung}
+	\include{ZV/Zufallsvariablen} %Dennis 
+\chapter{Induktive Statistik}
+%
+% Erstellt einen Eintrag "Index" ins Inhaltsverzeichnis
+%
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Index}
+\printindex
 
 \end{document}
